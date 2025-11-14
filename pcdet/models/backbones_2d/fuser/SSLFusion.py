@@ -52,7 +52,7 @@ class CrossLatentGNN(torch.nn.Module):
 
         modal1_l2v_graph_adj = self.modal1_l2v(modal1_feats)
         modal1_l2v_graph_adj = self.norm_func(modal1_l2v_graph_adj.view(-1, N), dim=1)
-        modal2_l2v_graph_adj = self.modal2_l2v(modal1_feats)
+        modal2_l2v_graph_adj = self.modal2_l2v(modal2_feats)
         modal2_l2v_graph_adj = self.norm_func(modal2_l2v_graph_adj.view(-1, N), dim=1)
         #----------------------------------------------
         # Step1 : Visible-to-Latent 
